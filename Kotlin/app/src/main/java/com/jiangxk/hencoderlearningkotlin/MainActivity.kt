@@ -7,6 +7,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.jiangxk.base.utils.CacheUtils
 import com.jiangxk.base.utils.Utils
+import com.jiangxk.base.utils.toast
 import com.jiangxk.hencoderlearningkotlin.entiy.User
 import com.jiangxk.hencoderlearningkotlin.widget.CodeView
 import com.jiangxk.lesson.LessonActivity
@@ -66,11 +67,11 @@ class MainActivity : AppCompatActivity() {
      */
     private fun verify(user: User): Boolean {
         if (user.username.length < 4) {
-            Utils.toast("用户名不合法")
+            toast("用户名不合法")
             return false
         }
         if (user.password.length < 4) {
-            Utils.toast("密码不合法")
+            toast("密码不合法")
             return false
         }
         return true

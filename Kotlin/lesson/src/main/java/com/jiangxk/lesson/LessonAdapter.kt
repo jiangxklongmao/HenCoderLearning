@@ -15,9 +15,9 @@ import com.jiangxk.lesson.entity.State
  * @time 2020-05-13  23:40
  */
 class LessonAdapter : RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
-    private var list = mutableListOf<Lesson>()
+    private var list = listOf<Lesson>()
 
-    fun updateAndNotify(list: MutableList<Lesson>) {
+    fun updateAndNotify(list: List<Lesson>) {
         this.list = list
         notifyDataSetChanged()
     }

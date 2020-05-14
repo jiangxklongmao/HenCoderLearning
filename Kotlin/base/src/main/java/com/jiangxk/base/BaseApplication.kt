@@ -10,9 +10,10 @@ import android.content.Context
  */
 class BaseApplication : Application() {
     companion object {
-        private lateinit var currentApplication: Context
-
-        fun currentApplication() = currentApplication
+        @JvmStatic
+        @get:JvmName("currentApplication")
+        lateinit var currentApplication: Context
+            private set
     }
 
 

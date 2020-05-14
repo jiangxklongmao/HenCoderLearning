@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.Gravity
 import androidx.appcompat.widget.AppCompatTextView
-import com.jiangxk.base.utils.Utils
+import com.jiangxk.base.utils.dp2px
 import com.jiangxk.hencoderlearningkotlin.R
 import kotlin.random.Random
 
@@ -17,19 +17,19 @@ import kotlin.random.Random
  * @author jiangxk
  * @time 2020-05-13  17:39
  */
-class CodeView : AppCompatTextView {
+class CodeView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) :
+    AppCompatTextView(context, attrs, defStyleAttr) {
 
-    constructor(context: Context?) : this(context, null)
-    constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
-        context,
-        attrs,
-        defStyleAttr
-    ) {
-        initView()
+    private val paint = Paint().apply {
+        isAntiAlias = true
+        style = Paint.Style.STROKE
+        color = context.getColor(R.color.colorAccent)
+        strokeWidth = 6f.dp2px()
     }
-
-    private val paint = Paint()
 
     private val codeList = arrayOf(
         "kotlin",
@@ -42,22 +42,17 @@ class CodeView : AppCompatTextView {
         "tcp/ip"
     )
 
-
-    private fun initView() {
+    init {
         setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f)
         gravity = Gravity.CENTER
         setBackgroundColor(context.getColor(R.color.colorPrimary))
         setTextColor(Color.WHITE)
 
-        paint.isAntiAlias = true
-        paint.style = Paint.Style.STROKE
-        paint.color = context.getColor(R.color.colorAccent)
-        paint.strokeWidth = Utils.dp2px(6f)
-
         updateCode()
     }
 
-     fun updateCode() {
+
+    fun updateCode() {
         val random = Random.nextInt(codeList.size)
         val code = codeList[random]
         text = code

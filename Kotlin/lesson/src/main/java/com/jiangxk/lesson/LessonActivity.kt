@@ -19,7 +19,11 @@ import com.jiangxk.lesson.entity.Lesson
  */
 class LessonActivity : AppCompatActivity(), BaseView<LessonPresenter>,
     Toolbar.OnMenuItemClickListener {
-    private val lessonPresenter = LessonPresenter(this)
+
+    override val presenter by lazy {
+        LessonPresenter(this)
+    }
+
 
     private val lessonAdapter = LessonAdapter()
 
@@ -34,27 +38,30 @@ class LessonActivity : AppCompatActivity(), BaseView<LessonPresenter>,
         toolbar.inflateMenu(R.menu.menu_lesson)
         toolbar.setOnMenuItemClickListener(this)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.list)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = lessonAdapter
-        recyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayout.VERTICAL))
+        findViewById<RecyclerView>(R.id.list)
+            .apply {
+                layoutManager = LinearLayoutManager(this@LessonActivity)
+                adapter = lessonAdapter
+                addItemDecoration(DividerItemDecoration(this@LessonActivity, LinearLayout.VERTICAL))
+            }
 
-        refreshLayout = findViewById(R.id.swipe_refresh_layout)
-        refreshLayout.setOnRefreshListener { getPresenter().fetchData() }
-        refreshLayout.isRefreshing = true
 
-        getPresenter().fetchData()
+        refreshLayout = findViewById<SwipeRefreshLayout>(R.id.swipe_refresh_layout).apply {
+            setOnRefreshListener { presenter.fetchData() }
+            isRefreshing = true
+        }
+
+
+        presenter.fetchData()
     }
 
 
-    override fun getPresenter() = lessonPresenter
-
     override fun onMenuItemClick(item: MenuItem?): Boolean {
-        getPresenter().showPlayback()
+        presenter.showPlayback()
         return false
     }
 
-    fun showResult(lessons: MutableList<Lesson>) {
+    fun showResult(lessons: List<Lesson>) {
         lessonAdapter.updateAndNotify(lessons)
         refreshLayout.isRefreshing = false
     }

@@ -6,5 +6,5 @@ package com.jiangxk.base
  * @time 2020-05-13  22:26
  */
 interface BaseView<T> {
-    fun getPresenter(): T
+    val presenter: T
 }

@@ -11,18 +11,16 @@ import com.jiangxk.base.R
  */
 class CacheUtils {
     companion object {
-        private val context = BaseApplication.currentApplication()
+        private val context = BaseApplication.currentApplication
         private val SP =
-            context.getSharedPreferences(context.getString(R.string.app_name), Context.MODE_PRIVATE)
+            BaseApplication.currentApplication.getSharedPreferences(context.getString(R.string.app_name), Context.MODE_PRIVATE)
 
         /**
          * 保存
          * @param key String
          * @param value String
          */
-        fun save(key: String, value: String) {
-            SP.edit().putString(key, value).apply()
-        }
+        fun save(key: String, value: String) = SP.edit().putString(key, value).apply()
 
         fun get(key: String) = SP.getString(key, null)
     }
