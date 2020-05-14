@@ -1,0 +1,2 @@
+include ':base', ':lesson', ':app'
+rootProject.name = 'HenCoderLearningKotlin'
