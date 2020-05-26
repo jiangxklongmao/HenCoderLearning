@@ -83,6 +83,10 @@ class DashBoardView : View {
      */
     private lateinit var velocityPaint: Paint
 
+    //渐变背景
+    private lateinit var shaderPaint: Paint
+    private lateinit var shaderPath: Path
+
     /**
      * 当前速度值
      */
@@ -159,6 +163,15 @@ class DashBoardView : View {
             style = Paint.Style.FILL_AND_STROKE
         }
 
+        shaderPaint = Paint().apply {
+            isAntiAlias = true
+            strokeWidth = 1f.dp2Px()
+            style = Paint.Style.FILL_AND_STROKE
+            color = resources.getColor(R.color.colorPrimary)
+        }
+        shaderPath = Path()
+
+
         velocityPaint = Paint().apply {
             color = Color.WHITE
             strokeWidth = 0.5f.dp2Px()
@@ -215,6 +228,21 @@ class DashBoardView : View {
         pathMeasure.setPath(velocityValuePath, false)
 
         scaleInterval = (pathMeasure.length - DASH_BOARD_SCALE_WIDTH) / (DASH_BOARD_SCALE_SIZE - 1)
+
+        shaderPaint.shader = RadialGradient(
+            width / 2f,
+            height / 2f + dashBoardOffset,
+            DASH_BOARD_RADIUS,
+            resources.getColor(R.color.transparent_70_colorPrimary),
+            resources.getColor(R.color.transparent),
+            Shader.TileMode.CLAMP
+        )
+
+        shaderPath.addCircle(
+            width / 2f,
+            height / 2f + dashBoardOffset,
+            DASH_BOARD_RADIUS, Path.Direction.CW
+        )
     }
 
 
@@ -245,6 +273,11 @@ class DashBoardView : View {
 
         canvas.restoreToCount(layerId)
 
+        //绘制渐变背景
+        if (velocityValue >= 180) {
+            canvas.drawPath(shaderPath, shaderPaint)
+        }
+
         //绘制 大刻度
         dashBoardScalePaint.pathEffect = scalePathDashPathEffect
         canvas.drawPath(dashBoardScalePath, dashBoardScalePaint)
@@ -255,6 +288,12 @@ class DashBoardView : View {
         //绘制文字数值
         for (index in 0 until DASH_BOARD_SCALE_SIZE) {
             val value = (index * 20).toString()
+
+            if (index >= 9) {
+                velocityValuePaint.color = resources.getColor(R.color.colorAccent)
+            } else {
+                velocityValuePaint.color = Color.WHITE
+            }
 
             canvas.drawTextOnPath(
                 (index * 20).toString(),
@@ -274,13 +313,20 @@ class DashBoardView : View {
         )
 
         canvas.drawLine(
-            width / 2f, height / 2f + dashBoardOffset,
+            (width / 2f + length / 4 * cos(radians)).toFloat(),
+            (height / 2f + dashBoardOffset + length / 4 * sin(radians)).toFloat(),
             (width / 2f + length * cos(radians)).toFloat(),
             (height / 2f + dashBoardOffset + length * sin(radians)).toFloat(),
             pointerPaint
         )
 
+
         //绘制速度
+        if (velocityValue >= 180) {
+            velocityPaint.color = resources.getColor(R.color.colorAccent)
+        } else {
+            velocityPaint.color = Color.WHITE
+        }
         canvas.drawText(
             "${velocityValue.toInt()}Km/h",
             width / 2f,
