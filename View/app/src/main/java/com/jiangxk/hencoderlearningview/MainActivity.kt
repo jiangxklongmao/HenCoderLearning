@@ -1,7 +1,9 @@
 package com.jiangxk.hencoderlearningview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.SeekBar
 import com.jiangxk.hencoderlearningview.View.DashBoardView
 
@@ -11,22 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val dashBoardView = findViewById<DashBoardView>(R.id.dashBoardView)
-        val seekBar = findViewById<SeekBar>(R.id.seekBar)
-        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {
-            }
+        val dashBoard = findViewById<Button>(R.id.btn_dash_board)
+        val pie = findViewById<Button>(R.id.btn_pie)
 
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {
-            }
+        dashBoard.setOnClickListener {
+            startActivity(Intent(this, DashBoardActivity::class.java))
+        }
 
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                if (fromUser) {
-                    dashBoardView.velocityValue = progress.toFloat()
-                }
-            }
+        pie.setOnClickListener {
+            startActivity(Intent(this, PieActivity::class.java))
+        }
 
-        })
 
     }
 }
