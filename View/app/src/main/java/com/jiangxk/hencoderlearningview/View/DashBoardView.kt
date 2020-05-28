@@ -3,10 +3,9 @@ package com.jiangxk.hencoderlearningview.View
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.View
-import androidx.core.graphics.minus
 import com.jiangxk.hencoderlearningview.R
+import com.jiangxk.hencoderlearningview.extension.dp2Px
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt

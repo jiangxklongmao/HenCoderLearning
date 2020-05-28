@@ -5,6 +5,7 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import com.jiangxk.hencoderlearningview.extension.dp2Px
 import kotlin.math.*
 
 /**

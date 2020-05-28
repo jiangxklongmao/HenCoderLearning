@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View
+package com.jiangxk.hencoderlearningview.extension
 
 import android.content.res.Resources
 import android.util.TypedValue
