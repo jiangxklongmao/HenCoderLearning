@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DashBoardActivity" />
-        <activity android:name=".PieActivity" />
-        <activity android:name=".CircleAvatarActivity" />
+        <activity android:name=".activity.DashBoardActivity" />
+        <activity android:name=".activity.PieActivity" />
+        <activity android:name=".activity.CircleAvatarActivity" />
+        <activity android:name=".activity.ProgressActivity" />
+        <activity android:name=".activity.TextWrapActivity" />
     </application>
 
 </manifest>

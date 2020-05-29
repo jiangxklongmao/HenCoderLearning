@@ -1,9 +1,8 @@
-package com.jiangxk.hencoderlearningview
+package com.jiangxk.hencoderlearningview.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.SeekBar
-import com.jiangxk.hencoderlearningview.View.DashBoardView
+import com.jiangxk.hencoderlearningview.R
 
 class PieActivity : AppCompatActivity() {
 

@@ -1,9 +1,9 @@
-package com.jiangxk.hencoderlearningview
+package com.jiangxk.hencoderlearningview.activity
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
+import com.jiangxk.hencoderlearningview.R
 import com.jiangxk.hencoderlearningview.View.DashBoardView
 
 /**

@@ -1,7 +1,8 @@
-package com.jiangxk.hencoderlearningview
+package com.jiangxk.hencoderlearningview.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.jiangxk.hencoderlearningview.R
 
 /**
  * @description com.jiangxk.hencoderlearningview

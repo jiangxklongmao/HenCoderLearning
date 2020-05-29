@@ -15,3 +15,11 @@ fun Float.dp2Px(): Float {
         Resources.getSystem().displayMetrics
     )
 }
+
+fun Int.dp2Px(): Float {
+    return TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_DIP,
+        this.toFloat(),
+        Resources.getSystem().displayMetrics
+    )
+}
