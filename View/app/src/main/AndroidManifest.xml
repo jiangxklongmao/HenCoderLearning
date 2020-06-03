@@ -21,6 +21,8 @@
         <activity android:name=".activity.CircleAvatarActivity" />
         <activity android:name=".activity.ProgressActivity" />
         <activity android:name=".activity.TextWrapActivity" />
+        <activity android:name=".activity.GeometricTransformationActivity" />
+        <activity android:name=".activity.animation.AnimationActivity" />
     </application>
 
 </manifest>

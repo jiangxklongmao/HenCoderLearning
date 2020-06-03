@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.jiangxk.hencoderlearningview.R
+import com.jiangxk.hencoderlearningview.activity.animation.AnimationActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         val circleAvatar = findViewById<Button>(R.id.btn_circle_avatar)
         val circleProgress = findViewById<Button>(R.id.btn_circle_progress)
         val btnTextWrap = findViewById<Button>(R.id.btn_text_wrap)
+        val btnGeometricTransformation = findViewById<Button>(R.id.btn_geometric_transformation)
+        val btnAnimationSet = findViewById<Button>(R.id.btn_animation_set)
 
         dashBoard.setOnClickListener {
             startActivity(Intent(this, DashBoardActivity::class.java))
@@ -36,6 +39,14 @@ class MainActivity : AppCompatActivity() {
 
         btnTextWrap.setOnClickListener {
             startActivity(Intent(this, TextWrapActivity::class.java))
+        }
+
+        btnGeometricTransformation.setOnClickListener {
+            startActivity(Intent(this, GeometricTransformationActivity::class.java))
+        }
+
+        btnAnimationSet.setOnClickListener {
+            startActivity(Intent(this, AnimationActivity::class.java))
         }
 
     }
