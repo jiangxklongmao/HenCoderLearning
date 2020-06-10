@@ -61,6 +61,13 @@
             android:layout_height="80dp"
             android:layout_margin="10dp"
             android:text="动画集合" />
+
+        <Button
+            android:id="@+id/btn_material_edit_text"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:text="MaterialEditText" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
