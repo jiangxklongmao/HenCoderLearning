@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val btnGeometricTransformation = findViewById<Button>(R.id.btn_geometric_transformation)
         val btnAnimationSet = findViewById<Button>(R.id.btn_animation_set)
         val btnMaterialEditText = findViewById<Button>(R.id.btn_material_edit_text)
+        val btnLabelLayout = findViewById<Button>(R.id.btn_label_layout)
 
         dashBoard.setOnClickListener {
             startActivity(Intent(this, DashBoardActivity::class.java))
@@ -52,6 +53,10 @@ class MainActivity : AppCompatActivity() {
 
         btnMaterialEditText.setOnClickListener {
             startActivity(Intent(this, MaterialEditTextActivity::class.java))
+        }
+
+        btnLabelLayout.setOnClickListener {
+            startActivity(Intent(this, LabelLayoutActivity::class.java))
         }
 
     }

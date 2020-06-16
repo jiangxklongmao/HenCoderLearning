@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.jiangxk.hencoderlearningview.View.LabelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/labelLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.jiangxk.hencoderlearningview.View.LabelTextView
-        android:id="@+id/ltv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-</LinearLayout>
+</com.jiangxk.hencoderlearningview.View.LabelLayout>
