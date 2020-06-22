@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val btnAnimationSet = findViewById<Button>(R.id.btn_animation_set)
         val btnMaterialEditText = findViewById<Button>(R.id.btn_material_edit_text)
         val btnLabelLayout = findViewById<Button>(R.id.btn_label_layout)
+        val btnScalableImageView = findViewById<Button>(R.id.btn_scalable_image_view)
 
         dashBoard.setOnClickListener {
             startActivity(Intent(this, DashBoardActivity::class.java))
@@ -57,6 +58,10 @@ class MainActivity : AppCompatActivity() {
 
         btnLabelLayout.setOnClickListener {
             startActivity(Intent(this, LabelLayoutActivity::class.java))
+        }
+
+        btnScalableImageView.setOnClickListener {
+            startActivity(Intent(this, ScalableImageViewActivity::class.java))
         }
 
     }

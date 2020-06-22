@@ -1,7 +1,11 @@
 package com.jiangxk.hencoderlearningview.extension
 
+import android.content.Context
 import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.util.TypedValue
+import com.jiangxk.hencoderlearningview.R
 
 /**
  * @description com.jiangxk.hencoderlearningview.View
@@ -22,4 +26,18 @@ fun Int.dp2Px(): Float {
         this.toFloat(),
         Resources.getSystem().displayMetrics
     )
+}
+
+fun getAvatar(context: Context, width: Float): Bitmap {
+    val options = BitmapFactory.Options()
+        .apply {
+            inJustDecodeBounds = true
+            BitmapFactory.decodeResource(context.resources, R.drawable.lengtu, this)
+            inJustDecodeBounds = false
+            inDensity = outWidth
+            inScaled = true
+            inTargetDensity = width.toInt()
+        }
+
+    return BitmapFactory.decodeResource(context.resources, R.drawable.lengtu, options)
 }
