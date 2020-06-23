@@ -26,6 +26,7 @@
         <activity android:name=".activity.MaterialEditTextActivity" />
         <activity android:name=".activity.LabelLayoutActivity" />
         <activity android:name=".activity.ScalableImageViewActivity" />
+        <activity android:name=".activity.multiTouch.MultiTouchActivity" />
     </application>
 
 </manifest>

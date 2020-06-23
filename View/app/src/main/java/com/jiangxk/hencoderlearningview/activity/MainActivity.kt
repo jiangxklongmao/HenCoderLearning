@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.jiangxk.hencoderlearningview.R
 import com.jiangxk.hencoderlearningview.activity.animation.AnimationActivity
+import com.jiangxk.hencoderlearningview.activity.multiTouch.MultiTouchActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val btnMaterialEditText = findViewById<Button>(R.id.btn_material_edit_text)
         val btnLabelLayout = findViewById<Button>(R.id.btn_label_layout)
         val btnScalableImageView = findViewById<Button>(R.id.btn_scalable_image_view)
+        val btnMultiTouch = findViewById<Button>(R.id.btn_multi_touch)
 
         dashBoard.setOnClickListener {
             startActivity(Intent(this, DashBoardActivity::class.java))
@@ -62,6 +64,10 @@ class MainActivity : AppCompatActivity() {
 
         btnScalableImageView.setOnClickListener {
             startActivity(Intent(this, ScalableImageViewActivity::class.java))
+        }
+
+        btnMultiTouch.setOnClickListener {
+            startActivity(Intent(this, MultiTouchActivity::class.java))
         }
 
     }
