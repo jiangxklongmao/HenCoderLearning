@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val btnLabelLayout = findViewById<Button>(R.id.btn_label_layout)
         val btnScalableImageView = findViewById<Button>(R.id.btn_scalable_image_view)
         val btnMultiTouch = findViewById<Button>(R.id.btn_multi_touch)
+        val btnSimplePager = findViewById<Button>(R.id.btn_simple_pager)
 
         dashBoard.setOnClickListener {
             startActivity(Intent(this, DashBoardActivity::class.java))
@@ -68,6 +69,10 @@ class MainActivity : AppCompatActivity() {
 
         btnMultiTouch.setOnClickListener {
             startActivity(Intent(this, MultiTouchActivity::class.java))
+        }
+
+        btnSimplePager.setOnClickListener {
+            startActivity(Intent(this, SimplePagerActivity::class.java))
         }
 
     }

@@ -27,6 +27,7 @@
         <activity android:name=".activity.LabelLayoutActivity" />
         <activity android:name=".activity.ScalableImageViewActivity" />
         <activity android:name=".activity.multiTouch.MultiTouchActivity" />
+        <activity android:name=".activity.SimplePagerActivity" />
     </application>
 
 </manifest>
