@@ -28,6 +28,7 @@
         <activity android:name=".activity.ScalableImageViewActivity" />
         <activity android:name=".activity.multiTouch.MultiTouchActivity" />
         <activity android:name=".activity.SimplePagerActivity" />
+        <activity android:name=".activity.drag.DragHelperActivity" />
     </application>
 
 </manifest>

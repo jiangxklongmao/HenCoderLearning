@@ -5,6 +5,15 @@
     <color name="colorAccent">#FFF80536</color>
     <color name="transparent">#00000000</color>
 
-    <color name="transparent_70_colorPrimary">#b3F80536</color>
-    <color name="transparent_10_colorPrimary">#1aF80536</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+
+    <color name="transparent_70_colorAccent">#b3F80536</color>
+    <color name="transparent_10_colorAccent">#1aF80536</color>
+
+    <color name="transparent_10_colorPrimary">#1a008577</color>
+    <color name="transparent_70_colorPrimary">#b3008577</color>
 </resources>

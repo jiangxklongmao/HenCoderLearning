@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.jiangxk.hencoderlearningview.R
 import com.jiangxk.hencoderlearningview.activity.animation.AnimationActivity
+import com.jiangxk.hencoderlearningview.activity.drag.DragHelperActivity
 import com.jiangxk.hencoderlearningview.activity.multiTouch.MultiTouchActivity
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val btnScalableImageView = findViewById<Button>(R.id.btn_scalable_image_view)
         val btnMultiTouch = findViewById<Button>(R.id.btn_multi_touch)
         val btnSimplePager = findViewById<Button>(R.id.btn_simple_pager)
+        val btnDragHelper = findViewById<Button>(R.id.btn_drag_helper)
 
         dashBoard.setOnClickListener {
             startActivity(Intent(this, DashBoardActivity::class.java))
@@ -73,6 +75,10 @@ class MainActivity : AppCompatActivity() {
 
         btnSimplePager.setOnClickListener {
             startActivity(Intent(this, SimplePagerActivity::class.java))
+        }
+
+        btnDragHelper.setOnClickListener {
+            startActivity(Intent(this, DragHelperActivity::class.java))
         }
 
     }

@@ -232,7 +232,7 @@ class DashBoardView : View {
             width / 2f,
             height / 2f + dashBoardOffset,
             DASH_BOARD_RADIUS,
-            resources.getColor(R.color.transparent_70_colorPrimary),
+            resources.getColor(R.color.transparent_70_colorAccent),
             resources.getColor(R.color.transparent),
             Shader.TileMode.CLAMP
         )
