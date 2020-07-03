@@ -68,7 +68,7 @@ class DragUpDownLayout : LinearLayout {
                     dragHelper.settleCapturedViewAt(0, 0)
                 }
             } else {
-                if (releasedChild.top < height - releasedChild.bottom) {
+                if (releasedChild.top < height / 3) {
                     dragHelper.settleCapturedViewAt(0, 0)
                 } else {
                     dragHelper.settleCapturedViewAt(0, 450.dp2Px().toInt())
