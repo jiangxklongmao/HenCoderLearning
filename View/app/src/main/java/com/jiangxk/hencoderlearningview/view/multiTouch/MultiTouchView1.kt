@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View.multiTouch
+package com.jiangxk.hencoderlearningview.view.multiTouch
 
 import android.content.Context
 import android.graphics.Canvas

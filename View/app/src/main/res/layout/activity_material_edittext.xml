@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:background="#30ff0000">
 
-        <com.jiangxk.hencoderlearningview.View.MaterialEditText
+        <com.jiangxk.hencoderlearningview.view.MaterialEditText
             android:id="@+id/mEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

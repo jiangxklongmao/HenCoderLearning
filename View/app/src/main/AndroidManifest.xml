@@ -29,6 +29,7 @@
         <activity android:name=".activity.multiTouch.MultiTouchActivity" />
         <activity android:name=".activity.SimplePagerActivity" />
         <activity android:name=".activity.drag.DragHelperActivity" />
+        <activity android:name=".activity.hook.HookActivity" />
     </application>
 
 </manifest>

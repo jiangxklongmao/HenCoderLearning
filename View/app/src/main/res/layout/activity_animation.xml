@@ -14,7 +14,7 @@
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent" />-->
 
-    <com.jiangxk.hencoderlearningview.View.animation.TextAnimationView
+    <com.jiangxk.hencoderlearningview.view.animation.TextAnimationView
         android:id="@+id/taView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

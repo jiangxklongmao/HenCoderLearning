@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View
+package com.jiangxk.hencoderlearningview.view
 
 import android.content.Context
 import android.graphics.*
@@ -6,8 +6,6 @@ import android.util.AttributeSet
 import android.view.View
 import com.jiangxk.hencoderlearningview.R
 import com.jiangxk.hencoderlearningview.extension.dp2Px
-import kotlin.math.ceil
-import kotlin.math.floor
 
 /**
  * @description com.jiangxk.hencoderlearningview.View

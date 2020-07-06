@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View.drag
+package com.jiangxk.hencoderlearningview.view.drag
 
 import android.content.Context
 import android.util.AttributeSet
@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.children
 import androidx.customview.widget.ViewDragHelper
-import kotlin.math.max
-import kotlin.math.min
 
 /**
  * @description com.jiangxk.hencoderlearningview.View.drag

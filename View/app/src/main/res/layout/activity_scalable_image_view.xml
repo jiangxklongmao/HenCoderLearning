@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.jiangxk.hencoderlearningview.View.ScalableImageView
+    <com.jiangxk.hencoderlearningview.view.ScalableImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

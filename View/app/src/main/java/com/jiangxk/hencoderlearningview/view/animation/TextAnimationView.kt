@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View.animation
+package com.jiangxk.hencoderlearningview.view.animation
 
 import android.content.Context
 import android.graphics.Canvas

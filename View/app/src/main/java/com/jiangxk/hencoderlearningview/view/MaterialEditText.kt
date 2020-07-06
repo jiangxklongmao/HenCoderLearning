@@ -1,11 +1,10 @@
-package com.jiangxk.hencoderlearningview.View
+package com.jiangxk.hencoderlearningview.view
 
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
-import android.widget.EditText
 import androidx.appcompat.widget.AppCompatEditText
 import com.jiangxk.hencoderlearningview.R
 import com.jiangxk.hencoderlearningview.extension.dp2Px

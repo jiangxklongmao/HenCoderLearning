@@ -1,12 +1,10 @@
-package com.jiangxk.hencoderlearningview.View.drag
+package com.jiangxk.hencoderlearningview.view.drag
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
-import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.LinearLayout
 import androidx.customview.widget.ViewDragHelper
 import com.jiangxk.hencoderlearningview.extension.dp2Px

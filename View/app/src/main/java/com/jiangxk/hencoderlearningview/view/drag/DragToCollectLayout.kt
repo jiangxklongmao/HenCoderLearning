@@ -1,21 +1,14 @@
-package com.jiangxk.hencoderlearningview.View.drag
+package com.jiangxk.hencoderlearningview.view.drag
 
 import android.content.ClipData
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.PixelFormat
-import android.graphics.Point
-import android.graphics.PorterDuff
-import android.os.IBinder
 import android.util.AttributeSet
-import android.util.Log
 import android.view.*
 import android.view.View.OnLongClickListener
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.core.view.ViewCompat
 import kotlinx.android.synthetic.main.activity_drag_to_collect.view.*
-import java.lang.reflect.Field
 
 /**
  * @description com.jiangxk.hencoderlearningview.View.drag

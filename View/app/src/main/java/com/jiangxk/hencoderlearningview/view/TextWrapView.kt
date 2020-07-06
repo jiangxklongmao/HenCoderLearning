@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View
+package com.jiangxk.hencoderlearningview.view
 
 import android.content.Context
 import android.graphics.Bitmap

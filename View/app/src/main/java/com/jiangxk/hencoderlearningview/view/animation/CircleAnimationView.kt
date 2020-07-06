@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View.animation
+package com.jiangxk.hencoderlearningview.view.animation
 
 import android.content.Context
 import android.graphics.Canvas
@@ -11,9 +11,10 @@ import com.jiangxk.hencoderlearningview.extension.dp2Px
 /**
  * @description com.jiangxk.hencoderlearningview.View.animation
  * @author jiangxk
- * @time 2020-06-03  11:30
+ * @time 2020-06-03  10:23
  */
-class GlobeMotionAnimationView : View {
+class CircleAnimationView : View {
+
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attributeSet: AttributeSet?) : this(context, attributeSet, 0)
     constructor(context: Context, attributeSet: AttributeSet?, defStyleAttr: Int) : super(
@@ -22,30 +23,20 @@ class GlobeMotionAnimationView : View {
         defStyleAttr
     )
 
-    private val radius = 10.dp2Px()
-
-    private var globeX = 0f
-        set(value) {
-            field = value
-            invalidate()
-        }
-    var globeY = 0f
-        set(value) {
-            field = value
-            invalidate()
-        }
-
     private val paint = Paint().apply {
         isAntiAlias = true
         color = resources.getColor(R.color.colorAccent)
     }
 
+    private var radius = 50.dp2Px()
+        set(value) {
+            field = value
+            invalidate()
+        }
 
     override fun onDraw(canvas: Canvas) {
-        super.onDraw(canvas)
 
-        canvas.drawCircle(radius + globeX, radius + globeY, radius, paint)
-
+        canvas.drawCircle(width / 2f, height / 2f, radius, paint)
     }
 
 }

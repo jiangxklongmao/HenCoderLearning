@@ -6,12 +6,7 @@ import android.animation.ValueAnimator
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.jiangxk.hencoderlearningview.R
-import com.jiangxk.hencoderlearningview.View.animation.CircleAnimationView
-import com.jiangxk.hencoderlearningview.View.animation.GlobeMotionAnimationView
-import com.jiangxk.hencoderlearningview.View.animation.TextAnimationView
-import com.jiangxk.hencoderlearningview.extension.dp2Px
-import kotlinx.android.synthetic.main.activity_animation.*
-import kotlin.math.ceil
+import com.jiangxk.hencoderlearningview.view.animation.TextAnimationView
 import kotlin.math.round
 
 /**

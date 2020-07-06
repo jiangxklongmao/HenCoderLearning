@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.jiangxk.hencoderlearningview.R
-import com.jiangxk.hencoderlearningview.View.OnPageChangeListener
-import com.jiangxk.hencoderlearningview.View.SimplePager
+import com.jiangxk.hencoderlearningview.view.OnPageChangeListener
+import com.jiangxk.hencoderlearningview.view.SimplePager
 import com.jiangxk.hencoderlearningview.extension.dp2Px
 
 /**

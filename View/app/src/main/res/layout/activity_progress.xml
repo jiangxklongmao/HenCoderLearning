@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.jiangxk.hencoderlearningview.View.ProgressView
+    <com.jiangxk.hencoderlearningview.view.ProgressView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

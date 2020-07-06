@@ -103,6 +103,13 @@
             android:layout_height="80dp"
             android:layout_margin="10dp"
             android:text="拖拽效果" />
+
+        <Button
+            android:id="@+id/btn_hook"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:text="Hook" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -1,16 +1,13 @@
-package com.jiangxk.hencoderlearningview.View.multiTouch
+package com.jiangxk.hencoderlearningview.view.multiTouch
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.util.AttributeSet
 import android.util.SparseArray
 import android.view.MotionEvent
 import android.view.View
-import android.view.ViewGroup
-import androidx.core.util.forEach
 import com.jiangxk.hencoderlearningview.extension.dp2Px
 import com.jiangxk.hencoderlearningview.extension.getAvatar
 

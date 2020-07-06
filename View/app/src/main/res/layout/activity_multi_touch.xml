@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.jiangxk.hencoderlearningview.View.multiTouch.MultiTouchView1
+    <com.jiangxk.hencoderlearningview.view.multiTouch.MultiTouchView1
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#000000" />

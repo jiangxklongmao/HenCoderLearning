@@ -3,17 +3,10 @@ package com.jiangxk.hencoderlearningview.activity
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator.INFINITE
 import android.animation.ValueAnimator.REVERSE
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.view.animation.AccelerateDecelerateInterpolator
-import android.view.animation.AccelerateInterpolator
-import android.view.animation.Animation
-import android.view.animation.AnimationSet
 import androidx.appcompat.app.AppCompatActivity
 import com.jiangxk.hencoderlearningview.R
-import com.jiangxk.hencoderlearningview.View.GeometricTransformationView
-import com.jiangxk.hencoderlearningview.extension.dp2Px
+import com.jiangxk.hencoderlearningview.view.GeometricTransformationView
 
 /**
  * @description com.jiangxk.hencoderlearningview.activity

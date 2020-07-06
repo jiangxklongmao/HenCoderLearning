@@ -1,4 +1,4 @@
-package com.jiangxk.hencoderlearningview.View
+package com.jiangxk.hencoderlearningview.view
 
 import android.animation.Animator
 import android.animation.ObjectAnimator

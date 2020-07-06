@@ -4,9 +4,8 @@ import android.os.Bundle
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.jiangxk.hencoderlearningview.R
-import com.jiangxk.hencoderlearningview.View.LabelTextView
+import com.jiangxk.hencoderlearningview.view.LabelTextView
 import kotlinx.android.synthetic.main.activity_tab_layout.*
-import kotlin.random.Random
 
 /**
  * @description com.jiangxk.hencoderlearningview.activity

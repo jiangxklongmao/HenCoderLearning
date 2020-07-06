@@ -7,7 +7,9 @@ import android.widget.Button
 import com.jiangxk.hencoderlearningview.R
 import com.jiangxk.hencoderlearningview.activity.animation.AnimationActivity
 import com.jiangxk.hencoderlearningview.activity.drag.DragHelperActivity
+import com.jiangxk.hencoderlearningview.activity.hook.HookActivity
 import com.jiangxk.hencoderlearningview.activity.multiTouch.MultiTouchActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -79,6 +81,10 @@ class MainActivity : AppCompatActivity() {
 
         btnDragHelper.setOnClickListener {
             startActivity(Intent(this, DragHelperActivity::class.java))
+        }
+
+        btn_hook.setOnClickListener {
+            startActivity(Intent(this, HookActivity::class.java))
         }
 
     }

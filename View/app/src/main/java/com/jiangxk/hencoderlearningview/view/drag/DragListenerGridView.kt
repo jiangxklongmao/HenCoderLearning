@@ -1,12 +1,10 @@
-package com.jiangxk.hencoderlearningview.View.drag
+package com.jiangxk.hencoderlearningview.view.drag
 
 import android.content.Context
-import android.graphics.Canvas
 import android.util.AttributeSet
 import android.view.DragEvent
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.DragStartHelper
 import androidx.core.view.children
 
 /**
