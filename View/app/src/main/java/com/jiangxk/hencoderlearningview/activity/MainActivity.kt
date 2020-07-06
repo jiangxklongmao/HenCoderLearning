@@ -87,5 +87,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, HookActivity::class.java))
         }
 
+        nested_scalable_image_view.setOnClickListener {
+            startActivity(Intent(this, NestedScalableImageViewActivity::class.java))
+        }
+
+
     }
 }

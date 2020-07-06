@@ -30,6 +30,7 @@
         <activity android:name=".activity.SimplePagerActivity" />
         <activity android:name=".activity.drag.DragHelperActivity" />
         <activity android:name=".activity.hook.HookActivity" />
+        <activity android:name=".activity.NestedScalableImageViewActivity" />
     </application>
 
 </manifest>
