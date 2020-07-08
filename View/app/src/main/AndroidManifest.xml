@@ -31,6 +31,14 @@
         <activity android:name=".activity.drag.DragHelperActivity" />
         <activity android:name=".activity.hook.HookActivity" />
         <activity android:name=".activity.NestedScalableImageViewActivity" />
+        <activity android:name=".activity.constraintLayout.ConstraintLayoutActivity" />
+        <activity android:name=".activity.constraintLayout.SimpleActivity" />
+        <activity android:name=".activity.constraintLayout.CircularPositioningActivity" />
+        <activity android:name=".activity.constraintLayout.HelpersActivity" />
+        <activity android:name=".activity.constraintLayout.BarrierActivity" />
+        <activity android:name=".activity.constraintLayout.CircularRevealActivity" />
+        <activity android:name=".activity.constraintLayout.FlowActivity" />
+        <activity android:name=".activity.constraintLayout.ConstraintSetXActivity" />
     </application>
 
 </manifest>

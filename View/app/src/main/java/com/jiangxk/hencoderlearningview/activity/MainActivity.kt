@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.jiangxk.hencoderlearningview.R
 import com.jiangxk.hencoderlearningview.activity.animation.AnimationActivity
+import com.jiangxk.hencoderlearningview.activity.constraintLayout.ConstraintLayoutActivity
 import com.jiangxk.hencoderlearningview.activity.drag.DragHelperActivity
 import com.jiangxk.hencoderlearningview.activity.hook.HookActivity
 import com.jiangxk.hencoderlearningview.activity.multiTouch.MultiTouchActivity
@@ -89,6 +90,10 @@ class MainActivity : AppCompatActivity() {
 
         nested_scalable_image_view.setOnClickListener {
             startActivity(Intent(this, NestedScalableImageViewActivity::class.java))
+        }
+
+        constraint_layout.setOnClickListener {
+            startActivity(Intent(this, ConstraintLayoutActivity::class.java))
         }
 
 
