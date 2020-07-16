@@ -124,6 +124,13 @@
             android:layout_height="80dp"
             android:layout_margin="10dp"
             android:text="约束布局" />
+
+        <Button
+            android:id="@+id/motion_layout"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:text="Motion动画" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

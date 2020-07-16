@@ -16,4 +16,13 @@
 
     <color name="transparent_10_colorPrimary">#1a008577</color>
     <color name="transparent_70_colorPrimary">#b3008577</color>
+
+    <color name="colorBookMark">#FFD600</color>
+
+    <color name="color_FF346FEA">#FF346FEA</color>
+    <color name="color_FFE9262D">#FFE9262D</color>
+    <color name="color_FFF6AE0D">#FFF6AE0D</color>
+    <color name="color_FF346CF8">#FF346CF8</color>
+    <color name="color_FF2D9B42">#FF2D9B42</color>
+    <color name="color_FFE22C29">#FFE22C29</color>
 </resources>

@@ -9,6 +9,7 @@ import com.jiangxk.hencoderlearningview.activity.animation.AnimationActivity
 import com.jiangxk.hencoderlearningview.activity.constraintLayout.ConstraintLayoutActivity
 import com.jiangxk.hencoderlearningview.activity.drag.DragHelperActivity
 import com.jiangxk.hencoderlearningview.activity.hook.HookActivity
+import com.jiangxk.hencoderlearningview.activity.motionLayout.MotionLayoutActivity
 import com.jiangxk.hencoderlearningview.activity.multiTouch.MultiTouchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -94,6 +95,10 @@ class MainActivity : AppCompatActivity() {
 
         constraint_layout.setOnClickListener {
             startActivity(Intent(this, ConstraintLayoutActivity::class.java))
+        }
+
+        motion_layout.setOnClickListener {
+            startActivity(Intent(this, MotionLayoutActivity::class.java))
         }
 
 

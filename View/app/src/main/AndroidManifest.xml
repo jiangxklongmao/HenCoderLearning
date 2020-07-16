@@ -39,6 +39,11 @@
         <activity android:name=".activity.constraintLayout.CircularRevealActivity" />
         <activity android:name=".activity.constraintLayout.FlowActivity" />
         <activity android:name=".activity.constraintLayout.ConstraintSetXActivity" />
+        <activity android:name=".activity.motionLayout.MotionLayoutActivity" />
+        <activity android:name=".activity.motionLayout.TransitionActivity" />
+        <activity android:name=".activity.motionLayout.MotionSampleActivity" />
+        <activity android:name=".activity.motionLayout.MotionSquareActivity" />
+        <activity android:name=".activity.motionLayout.HelixLineActivity" />
     </application>
 
 </manifest>
