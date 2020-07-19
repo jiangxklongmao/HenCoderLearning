@@ -1,3 +1,5 @@
+package multithreading;
+
 public class Synchronized3Demo implements TestDemo {
 
 

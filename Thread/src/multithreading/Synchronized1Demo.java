@@ -1,3 +1,5 @@
+package multithreading;
+
 public class Synchronized1Demo implements TestDemo {
     private boolean running = true;
 

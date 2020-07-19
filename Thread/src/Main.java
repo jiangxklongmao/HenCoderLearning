@@ -1,3 +1,8 @@
+import communication.ThreadInteractionDemo;
+import communication.WaitDemo;
+import multithreading.Synchronized1Demo;
+import multithreading.Synchronized2Demo;
+
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -9,8 +14,10 @@ public class Main {
 //        executor();
 //        callable();
 //        synchronized1Demo();
-        synchronized2Demo();
-        synchronized3Demo();
+//        synchronized2Demo();
+//        synchronized3Demo();
+//        communication();
+        waitDemo();
     }
 
 
@@ -121,5 +128,14 @@ public class Main {
 
     static void synchronized3Demo() {
         new Synchronized2Demo().runTest();
+    }
+
+    static void communication() {
+        ThreadInteractionDemo demo = new ThreadInteractionDemo();
+        demo.runTest();
+    }
+
+    static void waitDemo() {
+        new WaitDemo().runTest();
     }
 }

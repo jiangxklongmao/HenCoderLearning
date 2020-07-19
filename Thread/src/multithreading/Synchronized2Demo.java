@@ -1,3 +1,5 @@
+package multithreading;
+
 public class Synchronized2Demo implements TestDemo {
 
     private volatile int count = 0;
