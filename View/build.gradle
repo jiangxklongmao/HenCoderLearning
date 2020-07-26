@@ -5,7 +5,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
@@ -15,14 +15,48 @@ buildscript {
     }
 }
 
+//
+//Closure methodA = {
+//    return 123
+//}
+
+//void methodB(method) {
+//    //todo1
+//    method()
+//    //todo2
+//}
+
+//println methodB(methodA)
+
+println "abc"
+
+def a = new A()
+a.abc()
+
+class A {
+    void methodMissing(String name, Object args) {
+        if (name == "abc") {
+            println "abc..."
+        }
+    }
+}
+
+
 allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
 
 task clean(type: Delete) {
+    println 1
     delete rootProject.buildDir
+    doLast {
+        println 3
+    }
+    doFirst {
+        println 2
+    }
 }

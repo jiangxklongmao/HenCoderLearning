@@ -1,2 +1,6 @@
+include ':mvvm'
+include ':hotpatch'
+include ':plugin'
 include ':app'
+include ':pluginable'
 rootProject.name='HenCoderLearningView'

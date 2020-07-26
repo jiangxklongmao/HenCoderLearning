@@ -11,6 +11,7 @@ import com.jiangxk.hencoderlearningview.activity.drag.DragHelperActivity
 import com.jiangxk.hencoderlearningview.activity.hook.HookActivity
 import com.jiangxk.hencoderlearningview.activity.motionLayout.MotionLayoutActivity
 import com.jiangxk.hencoderlearningview.activity.multiTouch.MultiTouchActivity
+import com.jiangxk.hencoderlearningview.drawBadge
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -101,6 +102,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, MotionLayoutActivity::class.java))
         }
 
-
+        drawBadge()
     }
 }

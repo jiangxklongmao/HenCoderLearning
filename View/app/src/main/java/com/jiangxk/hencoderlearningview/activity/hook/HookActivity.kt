@@ -9,9 +9,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.jiangxk.hencoderlearningview.R
+import dalvik.system.DexClassLoader
 import kotlinx.android.synthetic.main.activity_hook.*
+import java.io.File
+import java.io.FileOutputStream
+import java.io.OutputStream
 import java.lang.Exception
-import java.lang.reflect.InvocationHandler
 import java.lang.reflect.Method
 import java.lang.reflect.Proxy
 
@@ -32,14 +35,43 @@ class HookActivity : AppCompatActivity() {
 
         btn_hook.setOnClickListener {
             Toast.makeText(this, "点击Hook", Toast.LENGTH_SHORT).show()
-
-
-            hookNotificationManager(this)
-            test()
+//            reflect()
+            classLoader()
         }
+    }
 
-        hookOnClickListener(btn_hook)
-        test()
+
+    private fun reflect() {
+
+        val classUtils = Class.forName("com.jiangxk.pluginable.utils.Utils")
+
+        val constructorMethod = classUtils.declaredConstructors[0]
+        constructorMethod.isAccessible = true
+        val utils: Any = constructorMethod.newInstance()
+        val shoutMethod: Method = classUtils.getDeclaredMethod("shout")
+        shoutMethod.isAccessible = true
+        shoutMethod.invoke(utils)
+
+    }
+
+    private fun classLoader() {
+
+        //复制到缓存中
+        val apk = File("$cacheDir/plugin.apk")
+        val source = assets.open("apk/plugin.apk")
+        source.copyTo(FileOutputStream(apk))
+
+
+        val classLoader = DexClassLoader(apk.path, cacheDir.path, null, null)
+        val classUtils = classLoader.loadClass("com.jiangxk.plugin.Utils")
+
+        val constructorMethod = classUtils.declaredConstructors[0]
+        constructorMethod.isAccessible = true
+        val utils: Any = constructorMethod.newInstance()
+        val shoutMethod: Method = classUtils.getDeclaredMethod("shout")
+        shoutMethod.isAccessible = true
+        shoutMethod.invoke(utils)
+
     }
 
 
